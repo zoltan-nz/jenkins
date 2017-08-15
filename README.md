@@ -59,3 +59,15 @@ $ docker run -p 8888:8080 -v $PWD/jenkins-data:/var/jenkins_home -v $PWD/demo-ap
 ```
 
 Using in Jenkins: `file:///demo-app`
+
+## Using docker inside the Jenkins container
+
+```
+$ docker run -v /var/run/docker.sock:/var/run/docker.sock ...
+```
+
+On MacOS:
+
+```
+docker run -v /private/var/run/docker.sock:/var/run/docker.sock
+```
